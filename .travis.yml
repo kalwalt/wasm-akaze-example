@@ -6,8 +6,8 @@ cache: cargo
 matrix:
   include:
 
-  # Builds with wasm-pack.
-  - rust: beta
+  # Builds with wasm-pack and stabe rust
+  - rust: stable
     env: RUST_BACKTRACE=1
     addons:
       firefox: latest
