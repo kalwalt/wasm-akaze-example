@@ -3,6 +3,7 @@
     <img src="https://travis-ci.com/kalwalt/wasm-akaze-example.svg?branch=main&amp;status=unknown" alt="build:">
   </a>
 </div>
+
 # WASM AKAZE EXAMPLE
 I'm testing akaze from the [cv crate](https://github.com/rust-cv/cv) with rustwasm. I'ts a work in progress, so don't expect yet a  working solution.
 
