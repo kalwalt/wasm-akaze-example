@@ -1,4 +1,19 @@
 # WASM AKAZE EXAMPLE
+I'm testing akaze from the [cv crate](https://github.com/rust-cv/cv) with rustwasm. I'ts a work in progress, so don't expect yet a  working solution.
+
+## Instructions
+You need to build the **pkg** folder, where all the wasm files are stored.
+Follow these steps:
+In the root folder run:
+`wasm-pack build`
+then:
+```
+cd www
+npm install
+npm run start
+```
+If you make changes, you need to run the `wasm-pack build` command and the steps above.
+
 
 <div align="center">
 
