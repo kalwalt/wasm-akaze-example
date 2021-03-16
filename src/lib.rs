@@ -21,11 +21,11 @@ pub fn open_from_buffer(buf: Vec<u8>, width: u32, height: u32) {
     let threshold = 0.001f64;
     let akaze = Akaze::new(threshold);
     console::log_1(&"Init Akaze...".into());
-    let dyn_image = DynamicImage::ImageRgba8(src_image);
+    let dyn_image = DynamicImage::ImageRgba8(src_image.clone());
     console::log_1(&"DynamicImage...".into());
     let (key_points, _descriptor) = akaze.extract(&dyn_image);
     console::log_1(&"Creating descriptors with akaze...".into());
-    let mut image = drawing::Blend(dyn_image);
+    let mut image = drawing::Blend(src_image);
     for KeyPoint { point: (x, y), .. } in key_points {
         drawing::draw_cross_mut(&mut image, Rgba([0, 255, 255, 128]), x as i32, y as i32);
     }
