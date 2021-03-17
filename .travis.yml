@@ -6,7 +6,7 @@ cache: cargo
 matrix:
   include:
 
-  # Builds with wasm-pack and stabe rust
+  # Builds with wasm-pack and stable rust
   - rust: stable
     env: RUST_BACKTRACE=1
     addons:

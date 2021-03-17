@@ -5,7 +5,7 @@
 </div>
 
 # WASM AKAZE EXAMPLE
-I'm testing akaze from the [cv crate](https://github.com/rust-cv/cv) with rustwasm. I'ts a work in progress, so don't expect yet a  working solution.
+I'm testing akaze from the [cv crate](https://github.com/rust-cv/cv) with rustwasm. I'ts a work in progress, you can test it locally for now.
 
 ## Instructions
 You need to build the **pkg** folder, where all the wasm files are stored.
