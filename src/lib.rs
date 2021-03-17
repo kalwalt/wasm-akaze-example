@@ -15,7 +15,7 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 
 #[wasm_bindgen]
-pub fn open_from_buffer(buf: Vec<u8>, width: u32, height: u32) {
+pub fn open_from_buffer(buf: Vec<u8>, width: u32, height: u32) -> Vec<u8> {
     utils::set_panic_hook();
     let src_image = ImageBuffer::<Rgba<u8>, Vec<u8>>::from_vec(width, height, buf).unwrap();
     let threshold = 0.001f64;
@@ -29,6 +29,7 @@ pub fn open_from_buffer(buf: Vec<u8>, width: u32, height: u32) {
     for KeyPoint { point: (x, y), .. } in key_points {
         drawing::draw_cross_mut(&mut image, Rgba([0, 255, 255, 128]), x as i32, y as i32);
     }
+    image.0.into_raw()
 }
 
 #[wasm_bindgen]

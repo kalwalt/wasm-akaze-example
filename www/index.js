@@ -17,7 +17,8 @@ function getImage(url){
                 ctx.drawImage(img, 0, 0)
                 let imgData = ctx.getImageData(0,0,canvas.width, canvas.height)
                 console.log(imgData);
-                wasm.open_from_buffer(imgData.data,canvas.width,canvas.height)
+                let raw = wasm.open_from_buffer(imgData.data,canvas.width,canvas.height)
+                console.log(raw)
             }
             img.onerror = function(){
                 reject(url)
