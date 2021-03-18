@@ -8,6 +8,12 @@
   <body>
     <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
     <script type="module" src="index.js"></script>
+    <div>
+      <h1>Wasm Akaze Example</h1>
+      <p>A simple example to load a image and extract features descriptors with AKAZE. 
+      The image is outputted in a canvas with small blue points overlayed (descriptors).
+      On the left the original pinball image on the right the transformed image. Wasm code is created with Rust and Wasm-bingden.</p>
+    </div>
     <div class="canvases">
       <canvas id="cv"></canvas>
       <canvas id="cv-akaze"></canvas>
