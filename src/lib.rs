@@ -3,7 +3,6 @@ mod utils;
 use wasm_bindgen::prelude::*;
 use cv::feature::akaze::{Akaze, KeyPoint};
 use image::{DynamicImage, ImageBuffer, Rgba};
-use image::io::Reader as ImageReader;
 use imageproc::drawing;
 use web_sys::console;
 
@@ -30,12 +29,6 @@ pub fn open_from_buffer(buf: Vec<u8>, width: u32, height: u32) -> Vec<u8> {
         drawing::draw_cross_mut(&mut image, Rgba([0, 255, 255, 128]), x as i32, y as i32);
     }
     image.0.into_raw()
-}
-
-#[wasm_bindgen]
-pub fn print_test(value: u32) {
-    //this can't work... printing are lost.
-    println!("{}", value);
 }
 
 #[wasm_bindgen]
