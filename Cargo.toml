@@ -12,9 +12,9 @@ default = ["console_error_panic_hook"]
 
 [dependencies]
 wasm-bindgen = "0.2.71"
-image = "0.23.14"
-imageproc = "0.22.0"
-web-sys = { version = "0.3.48", features = ['console'] }
+image = "0.24.6"
+imageproc = "0.23.0"
+web-sys = { version = "0.3.64", features = ['console'] }
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
@@ -30,7 +30,8 @@ console_error_panic_hook = { version = "0.1.6", optional = true }
 wee_alloc = { version = "0.4.5", optional = true }
 
 [dependencies.cv]
-version= "0.6.0"
+#version= "0.6.0"
+git = "https://github.com/rust-cv/cv.git"
 default-features = false
 features = ["akaze"]
 

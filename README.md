@@ -21,7 +21,7 @@ If you make changes, you need to install [wasm-pack](https://rustwasm.github.io/
 `curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh`
 
 
-run the 🛠️ `wasm-pack build` command and then the steps below:
+run the 🛠️ `wasm-pack build --release --target web` command and then the steps below:
 
 ```
 cd www

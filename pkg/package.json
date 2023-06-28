@@ -11,5 +11,7 @@
   ],
   "module": "wasm_akaze_example.js",
   "types": "wasm_akaze_example.d.ts",
-  "sideEffects": false
+  "sideEffects": [
+    "./snippets/*"
+  ]
 }

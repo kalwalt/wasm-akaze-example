@@ -14,20 +14,24 @@ If you want to test locally on your machine just run:
 ```
 cd www
 npm install
-npm run start
 ```
+and run a local server.
 If you make changes, you need to install [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/):
 
 `curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh`
 
 
-run the 🛠️ `wasm-pack build` command and then the steps below:
+run the 🛠️ `wasm-pack build --release --target web` command and then the steps below:
 
 ```
 cd www
 npm install
-npm run start
 ```
+
+and run a local server.
+
+##  Live example
+Check the live [example](https://kalwalt.github.io/wasm-akaze-example/www)
 
 ## 🔋 Batteries Included
 

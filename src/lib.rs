@@ -16,6 +16,7 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 #[wasm_bindgen]
 pub fn open_from_buffer(buf: Vec<u8>, width: u32, height: u32) -> Vec<u8> {
     utils::set_panic_hook();
+    console::log_1(&"A simple akaze example".into());
     let src_image = ImageBuffer::<Rgba<u8>, Vec<u8>>::from_vec(width, height, buf).unwrap();
     let threshold = 0.001f64;
     let akaze = Akaze::new(threshold);
